@@ -8,7 +8,7 @@ const About = () => {
       <p className="mb-4 text-2xl font-light">
         This project is part of the
         <a
-          href="https://www.udemy.com/course/modern-react-front-to-back/"
+          href="https://www.udemy.com/course/react-front-to-back-2022/"
           className="underline mx-2"
         >
           React Front To Back
