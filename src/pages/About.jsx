@@ -10,22 +10,31 @@ const About = () => {
         <a
           href="https://www.udemy.com/course/react-front-to-back-2022/"
           className="underline mx-2"
+          target="_blank"
+          rel="noreferrer"
         >
           React Front To Back
         </a>
-        Udemy course by
+        Udemy course by {''}
         <strong>
-          <a href="https://traversymedia.com"> Brad Traversy</a>
+          <a href="https://traversymedia.com" target="_blank" rel="noreferrer">
+            Brad Traversy
+          </a>
         </strong>
         .
       </p>
 
       <p className="text-lg text-gray-400">
-        Version <span className="text-white">1.0.0</span>
+        Version <span className="text-white">1.0.1</span>
       </p>
       <p className="text-lg text-gray-400">
-        Layout By:
-        <a className="text-white" href="https://twitter.com/hassibmoddasser">
+        Layout By:{' '}
+        <a
+          className="text-white"
+          href="https://twitter.com/hassibmoddasser"
+          target="_blank"
+          rel="noreferrer"
+        >
           Hassib Moddasser
         </a>
       </p>

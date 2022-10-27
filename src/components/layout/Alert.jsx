@@ -9,7 +9,7 @@ const Alert = () => {
       className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 mb-5 gap-8"
       style={{ visibility: alert ? 'visible' : 'hidden' }}
     >
-      <div className={`alert shadow-lg alert-${alert?.type}`}>
+      <div className={`alert ${alert ? 'alert-' + alert.type : ''} shadow-lg `}>
         <div>
           <FiAlertCircle size="24" />
           <strong>{alert?.message}</strong>

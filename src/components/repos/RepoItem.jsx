@@ -11,17 +11,25 @@ const RepoItem = ({ repo }) => {
         </h3>
         <p className="mb-3">{repo.description}</p>
         <div>
-          <div className="mr-2 badge badge-info badge-lg">
-            <FaEye className="mr-2" /> {repo.watchers_count}
+          <div className="tooltip" data-tip="watchers_count">
+            <div className="mr-2 badge badge-info badge-lg">
+              <FaEye className="mr-2" /> {repo.watchers_count}
+            </div>
           </div>
-          <div className="mr-2 badge badge-success badge-lg">
-            <FaStar className="mr-2" /> {repo.stargazers_count}
+          <div className="tooltip" data-tip="stargazers_count">
+            <div className="mr-2 badge badge-success badge-lg">
+              <FaStar className="mr-2" /> {repo.stargazers_count}
+            </div>
           </div>
-          <div className="mr-2 badge badge-error badge-lg">
-            <FaInfo className="mr-2" /> {repo.open_issues}
+          <div className="tooltip" data-tip="open_issues">
+            <div className="mr-2 badge badge-error badge-lg">
+              <FaInfo className="mr-2" /> {repo.open_issues}
+            </div>
           </div>
-          <div className="mr-2 badge badge-warning badge-lg">
-            <FaUtensils className="mr-2" /> {repo.forks}
+          <div className="tooltip" data-tip="forks">
+            <div className="mr-2 badge badge-warning badge-lg">
+              <FaUtensils className="mr-2" /> {repo.forks}
+            </div>
           </div>
         </div>
       </div>
