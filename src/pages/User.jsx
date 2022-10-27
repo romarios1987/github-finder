@@ -4,11 +4,11 @@ import { Link, useParams } from 'react-router-dom';
 import Spinner from '../components/layout/Spinner';
 import RepoList from '../components/repos/RepoList';
 import GithubContext from '../context/github/GithubContext';
+import { getUser, getUserRepos } from '../context/github/GithubActions';
 
 const User = () => {
   const { login } = useParams();
-  const { getUser, getUserRepos, user, loading, repos } =
-    useContext(GithubContext);
+  const { user, loading, repos, dispatch } = useContext(GithubContext);
   const {
     name,
     type,
@@ -26,10 +26,16 @@ const User = () => {
   } = user;
 
   useEffect(() => {
-    getUser(login);
-    getUserRepos(login);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    dispatch({ type: 'SET_LOADING' });
+    const getUserData = async () => {
+      const userData = await getUser(login);
+      dispatch({ type: 'GET_USER', payload: userData });
+
+      const userRepoData = await getUserRepos(login);
+      dispatch({ type: 'GET_USER_REPOS', payload: userRepoData });
+    };
+    getUserData();
+  }, [dispatch, login]);
 
   if (loading) {
     return <Spinner />;
