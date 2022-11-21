@@ -14,7 +14,7 @@ $ npm run start
 
 ## Deploy on Netlify
 
-## [GitHub Finder](https://storied-duckanoo-bede25.netlify.app/)
+## [GitHub Finder](https://phenomenal-salamander-03b0b9.netlify.app/)
 
 ## Tools used
 
@@ -22,3 +22,4 @@ $ npm run start
 - [DaisyUI](https://daisyui.com)
 - [ReactJS](https://reactjs.org/)
 - [React Icons](https://react-icons.github.io/react-icons)
+- [React TypeScript](https://react-typescript-cheatsheet.netlify.app/)
