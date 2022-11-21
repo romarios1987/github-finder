@@ -34,8 +34,6 @@ const User = () => {
 		hireable,
 	} = user
 
-	console.log(user)
-
 	useEffect(() => {
 		dispatch({ type: SET_LOADING })
 		const getUserData = async () => {
